@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import AppActions from '../actions/AppActions';
 import AppStore from '../stores/AppStore';
+import SearchForm from './SearchForm';
 
 class App extends Component{
   constructor(props) {
@@ -9,7 +10,9 @@ class App extends Component{
 
   render() {
     return(
-        <div>Yeahhh</div>
+        <div>
+          <SearchForm />
+        </div>
       )
   }
 }
