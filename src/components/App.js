@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import AppActions from '../actions/AppActions';
 import AppStore from '../stores/AppStore';
 import SearchForm from './SearchForm';
+import MovieResults from './MovieResults';
 
 const getAppState = () => {
   return {
@@ -30,9 +31,15 @@ class App extends Component{
 
   render() {
     console.log(this.state.movies);
+
     return(
         <div>
           <SearchForm />
+          {
+            this.state.movies.length > 0 ?
+            <MovieResults movies={this.state.movies} /> :
+            null
+          }
         </div>
       )
   }
